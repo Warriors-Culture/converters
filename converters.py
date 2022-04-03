@@ -1,361 +1,708 @@
-def length(type1, type2, num):
-    if type1 == "1" and type2 == "1":
+def length(type1, type2, num, symbol):
+    if type1 == "km" and type2 == "km":
         return str(f"{num}km")
-    if type1 == "1" and type2 == "2":
+    if type1 == "km" and type2 == "m":
         result = num / 1000
-        return str(f"{result}m")
-    if type1 == "1" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "km" and type2 == "cm":
         result = num/100000
-        return str(f"{result}cm")
-    if type1 == "1" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}cm")
+        else:
+            return str(f"{result}")
+    if type1 == "km" and type2 == "mm":
         result = num/1000000
-        return str(f"{result}mm")
-    if type1 == "1" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}mm")
+        else:
+            return str(f"{result}")
+    if type1 == "km" and type2 == "nm":
         result = num/1000000000000
-        return str(f"{result}nm")
-    if type1 == "1" and type2 == "6":
+        if symbol == True:
+            return str(f"{result}nm")
+        else:
+            return str(f"{result}")
+    if type1 == "km" and type2 == "mi":
         result = num * 0.6214
-        return str(f"{result}mi")
-    if type1 == "1" and type2 == "7":
+        if symbol == True:
+            return str(f"{result}mi")
+        else:
+            return str(f"{result}")
+    if type1 == "km" and type2 == "yd":
         result = num * 1093.613298
-        return str(f"{result}yd")
-    if type1 == "1" and type2 == "8":
+        if symbol == True:
+            return str(f"{result}yd")
+        else:
+            return str(f"{result}")
+    if type1 == "km" and type2 == "ft":
         result = num * 3280.83989
-        return str(f"{result}ft")
-    if type1 == "1" and type2 == "9":
+        if symbol == True:
+            return str(f"{result}ft")
+        else:
+            return str(f"{result}")
+    if type1 == "km" and type2 == "in":
         result = num * 39370.07874
-        return str(f"{result}in")
+        if symbol == True:
+            return str(f"{result}in")
+        else:
+            return str(f"{result}")
+
     # Meter
-    if type1 == "2" and type2 == "1":
+    if type1 == "m" and type2 == "km":
         result = num * 1000
-        return str(f"{result}km")
-    if type1 == "2" and type2 == "2":
+        if symbol == True:
+            return str(f"{result}km")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "m":
         result = num
-        return str(f"{result}m")
-    if type1 == "2" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "cm":
         result = num * 100
-        return str(f"{result}cm")
-    if type1 == "2" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}cm")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "mm":
         result = num * 1000
-        return str(f"{result}mm")
-    if type1 == "2" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}mm")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "nm":
         result = num * 1000000000
-        return str(f"{result}nm")
-    if type1 == "2" and type2 == "6":
+        if symbol == True:
+            return str(f"{result}nm")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "mi":
         result = num * 0.00062137
-        return str(f"{result}mi")
-    if type1 == "2" and type2 == "7":
+        if symbol == True:
+            return str(f"{result}mi")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "yd":
         result = num * 1.09361
-        return str(f"{result}yd")
-    if type1 == "2" and type2 == "8":
+        if symbol == True:
+            return str(f"{result}yd")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "ft":
         result = num * 3.28084
-        return str(f"{result}ft")
-    if type1 == "2" and type2 == "9":
+        if symbol == True:
+            return str(f"{result}ft")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "in":
         result = num * 39.37
-        return str(f"{result}in")
+        if symbol == True:
+            return str(f"{result}in")
+        else:
+            return str(f"{result}")
     # Centimeter
-    if type1 == "3" and type2 == "1":
+    if type1 == "cm" and type2 == "km":
         result = num / 100000
-        return str(f"{result}km")
-    if type1 == "3" and type2 == "2":
+        if symbol == True:
+            return str(f"{result}km")
+        else:
+            return str(f"{result}")
+    if type1 == "cm" and type2 == "m":
         result = num / 100
-        return str(f"{result}m")
-    if type1 == "3" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "cm" and type2 == "cm":
         result = num
-        return str(f"{result}cm")
-    if type1 == "3" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}cm")
+        else:
+            return str(f"{result}")
+    if type1 == "cm" and type2 == "mm":
         result = num * 10
-        return str(f"{result}mm")
-    if type1 == "3" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}mm")
+        else:
+            return str(f"{result}")
+    if type1 == "cm" and type2 == "nm":
         result = num * 10000000
-        return str(f"{result}nm")
-    if type1 == "3" and type2 == "6":
+        if symbol == True:
+            return str(f"{result}nm")
+        else:
+            return str(f"{result}")
+    if type1 == "cm" and type2 == "mi":
         result = num / 160934
-        return str(f"{result}mi")
-    if type1 == "3" and type2 == "7":
+        if symbol == True:
+            return str(f"{result}mi")
+        else:
+            return str(f"{result}")
+    if type1 == "cm" and type2 == "yd":
         result = num / 91.44
-        return str(f"{result}yd")
-    if type1 == "3" and type2 == "8":
+        if symbol == True:
+            return str(f"{result}yd")
+        else:
+            return str(f"{result}")
+    if type1 == "cm" and type2 == "ft":
         result = num / 30.48
-        return str(f"{result}ft")
-    if type1 == "3" and type2 == "9":
+        if symbol == True:
+            return str(f"{result}ft")
+        else:
+            return str(f"{result}")
+    if type1 == "cm" and type2 == "in":
         result = num / 2.54
-        return str(f"{result}in")
+        if symbol == True:
+            return str(f"{result}in")
+        else:
+            return str(f"{result}")
     # Millimeter
-    if type1 == "4" and type2 == "1":
+    if type1 == "mm" and type2 == "km":
         result = num/1000000
-        return str(f"{result}km")
-    if type1 == "4" and type2 == "2":
+        if symbol == True:
+            return str(f"{result}km")
+        else:
+            return str(f"{result}")
+    if type1 == "mm" and type2 == "m":
         result = num/1000
-        return str(f"{result}m")
-    if type1 == "4" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "mm" and type2 == "cm":
         result = num / 10
-        return str(f"{result}cm")
-    if type1 == "4" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}cm")
+        else:
+            return str(f"{result}")
+    if type1 == "mm" and type2 == "mm":
         result = num
-        return str(f"{result}mm")
-    if type1 == "4" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}mm")
+        else:
+            return str(f"{result}")
+    if type1 == "mm" and type2 == "nm":
         result = num * 1000000
-        return str(f"{result}nm")
-    if type1 == "4" and type2 == "6":
+        if symbol == True:
+            return str(f"{result}nm")
+        else:
+            return str(f"{result}")
+    if type1 == "mm" and type2 == "mi":
         result = num / 1609000
-        return str(f"{result}mi")
-    if type1 == "4" and type2 == "7":
+        if symbol == True:
+            return str(f"{result}mi")
+        else:
+            return str(f"{result}")
+    if type1 == "mm" and type2 == "yd":
         result = num / 914
-        return str(f"{result}yd")
-    if type1 == "4" and type2 == "8":
+        if symbol == True:
+            return str(f"{result}yd")
+        else:
+            return str(f"{result}")
+    if type1 == "mm" and type2 == "ft":
         result = num / 305
-        return str(f"{result}ft")
-    if type1 == "4" and type2 == "9":
+        if symbol == True:
+            return str(f"{result}ft")
+        else:
+            return str(f"{result}")
+    if type1 == "mm" and type2 == "in":
         result = num / 25.4
-        return str(f"{result}in")
+        if symbol == True:
+            return str(f"{result}in")
+        else:
+            return str(f"{result}")
     # Nanometer
-    if type1 == "5" and type2 == "1":
+    if type1 == "nm" and type2 == "km":
         result = num/1000000000000
-        return str(f"{result}km")
-    if type1 == "5" and type2 == "2":
+        if symbol == True:
+            return str(f"{result}km")
+        else:
+            return str(f"{result}")
+    if type1 == "nm" and type2 == "m":
         result = num/1000000000
-        return str(f"{result}m")
-    if type1 == "5" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "nm" and type2 == "cm":
         result = num / 10000000
-        return str(f"{result}cm")
-    if type1 == "5" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}cm")
+        else:
+            return str(f"{result}")
+    if type1 == "nm" and type2 == "mm":
         result = num / 1000000
-        return str(f"{result}mm")
-    if type1 == "5" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}mm")
+        else:
+            return str(f"{result}")
+    if type1 == "nm" and type2 == "nm":
         result = num
-        return str(f"{result}nm")
-    if type1 == "5" and type2 == "6":
+        if symbol == True:
+            return str(f"{result}nm")
+        else:
+            return str(f"{result}")
+    if type1 == "nm" and type2 == "mi":
         result = num / 1609000000000
-        return str(f"{result}mi")
-    if type1 == "5" and type2 == "7":
+        if symbol == True:
+            return str(f"{result}mi")
+        else:
+            return str(f"{result}")
+    if type1 == "nm" and type2 == "yd":
         result = num / 914400000
-        return str(f"{result}yd")
-    if type1 == "5" and type2 == "8":
+        if symbol == True:
+            return str(f"{result}yd")
+        else:
+            return str(f"{result}")
+    if type1 == "nm" and type2 == "ft":
         result = num / 304800000
-        return str(f"{result}ft")
-    if type1 == "5" and type2 == "9":
+        if symbol == True:
+            return str(f"{result}ft")
+        else:
+            return str(f"{result}")
+    if type1 == "nm" and type2 == "in":
         result = num / 25400000
-        return str(f"{result}in")
+        if symbol == True:
+            return str(f"{result}in")
+        else:
+            return str(f"{result}")
     # Mile
-    if type1 == "6" and type2 == "1":
+    if type1 == "mi" and type2 == "km":
         result = num*1.609
-        return str(f"{result}km")
-    if type1 == "6" and type2 == "2":
+        if symbol == True:
+            return str(f"{result}km")
+        else:
+            return str(f"{result}")
+    if type1 == "mi" and type2 == "m":
         result = num*1609
-        return str(f"{result}m")
-    if type1 == "6" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "mi" and type2 == "cm":
         result = num * 160934
-        return str(f"{result}cm")
-    if type1 == "6" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}cm")
+        else:
+            return str(f"{result}")
+    if type1 == "mi" and type2 == "mm":
         result = num * 1609000
-        return str(f"{result}mm")
-    if type1 == "6" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}mm")
+        else:
+            return str(f"{result}")
+    if type1 == "mi" and type2 == "nm":
         result = num * 1609000000000
-        return str(f"{result}nm")
-    if type1 == "6" and type2 == "6":
+        if symbol == True:
+            return str(f"{result}nm")
+        else:
+            return str(f"{result}")
+    if type1 == "mi" and type2 == "mi":
         result = num
-        return str(f"{result}mi")
-    if type1 == "6" and type2 == "7":
+        if symbol == True:
+            return str(f"{result}mi")
+        else:
+            return str(f"{result}")
+    if type1 == "mi" and type2 == "yd":
         result = num * 1764
-        return str(f"{result}yd")
-    if type1 == "6" and type2 == "8":
+        if symbol == True:
+            return str(f"{result}yd")
+        else:
+            return str(f"{result}")
+    if type1 == "mi" and type2 == "ft":
         result = num * 5280
-        return str(f"{result}ft")
-    if type1 == "6" and type2 == "9":
+        if symbol == True:
+            return str(f"{result}ft")
+        else:
+            return str(f"{result}")
+    if type1 == "mi" and type2 == "in":
         result = num * 63360
-        return str(f"{result}in")
+        if symbol == True:
+            return str(f"{result}in")
+        else:
+            return str(f"{result}")
     # Yard
-    if type1 == "7" and type2 == "1":
+    if type1 == "yd" and type2 == "km":
         result = num/1094
-        return str(f"{result}km")
-    if type1 == "7" and type2 == "2":
+        if symbol == True:
+            return str(f"{result}km")
+        else:
+            return str(f"{result}")
+    if type1 == "yd" and type2 == "m":
         result = num/1.094
-        return str(f"{result}m")
-    if type1 == "7" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "yd" and type2 == "cm":
         result = num * 91.44
-        return str(f"{result}cm")
-    if type1 == "7" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}cm")
+        else:
+            return str(f"{result}")
+    if type1 == "yd" and type2 == "mm":
         result = num * 914
-        return str(f"{result}mm")
-    if type1 == "7" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}mm")
+        else:
+            return str(f"{result}")
+    if type1 == "yd" and type2 == "nm":
         result = num * 914400000
-        return str(f"{result}nm")
-    if type1 == "7" and type2 == "6":
+        if symbol == True:
+            return str(f"{result}nm")
+        else:
+            return str(f"{result}")
+    if type1 == "yd" and type2 == "mi":
         result = num / 1760
-        return str(f"{result}mi")
-    if type1 == "7" and type2 == "7":
+        if symbol == True:
+            return str(f"{result}mi")
+        else:
+            return str(f"{result}")
+    if type1 == "yd" and type2 == "yd":
         result = num
-        return str(f"{result}yd")
-    if type1 == "7" and type2 == "8":
+        if symbol == True:
+            return str(f"{result}yd")
+        else:
+            return str(f"{result}")
+    if type1 == "yd" and type2 == "ft":
         result = num * 3
-        return str(f"{result}ft")
-    if type1 == "7" and type2 == "9":
+        if symbol == True:
+            return str(f"{result}ft")
+        else:
+            return str(f"{result}")
+    if type1 == "yd" and type2 == "in":
         result = num * 36
-        return str(f"{result}in")
+        if symbol == True:
+            return str(f"{result}in")
+        else:
+            return str(f"{result}")
         # Foot
-    if type1 == "8" and type2 == "1":
+    if type1 == "ft" and type2 == "km":
         result = num / 3281
-        return str(f"{result}km")
-    if type1 == "8" and type2 == "2":
+        if symbol == True:
+            return str(f"{result}km")
+        else:
+            return str(f"{result}")
+    if type1 == "ft" and type2 == "m":
         result = num / 3.281
-        return str(f"{result}m")
-    if type1 == "8" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "ft" and type2 == "cm":
         result = num * 30.48
-        return str(f"{result}cm")
-    if type1 == "8" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}cm")
+        else:
+            return str(f"{result}")
+    if type1 == "ft" and type2 == "mm":
         result = num * 305
-        return str(f"{result}mm")
-    if type1 == "8" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}mm")
+        else:
+            return str(f"{result}")
+    if type1 == "ft" and type2 == "nm":
         result = num * 304800000
-        return str(f"{result}nm")
-    if type1 == "8" and type2 == "6":
+        if symbol == True:
+            return str(f"{result}nm")
+        else:
+            return str(f"{result}")
+    if type1 == "ft" and type2 == "mi":
         result = num / 5280
-        return str(f"{result}mi")
-    if type1 == "8" and type2 == "7":
+        if symbol == True:
+            return str(f"{result}mi")
+        else:
+            return str(f"{result}")
+    if type1 == "ft" and type2 == "yd":
         result = num / 3
-        return str(f"{result}yd")
-    if type1 == "8" and type2 == "8":
+        if symbol == True:
+            return str(f"{result}yd")
+        else:
+            return str(f"{result}")
+    if type1 == "ft" and type2 == "ft":
         result = num
-        return str(f"{result}ft")
-    if type1 == "8" and type2 == "9":
+        if symbol == True:
+            return str(f"{result}ft")
+        else:
+            return str(f"{result}")
+    if type1 == "ft" and type2 == "in":
         result = num * 12
-        return str(f"{result}in")
+        if symbol == True:
+            return str(f"{result}in")
+        else:
+            return str(f"{result}")
         # Inch
-    if type1 == "9" and type2 == "1":
+    if type1 == "in" and type2 == "km":
         result = num / 39370
-        return str(f"{result}km")
-    if type1 == "9" and type2 == "2":
+        if symbol == True:
+            return str(f"{result}km")
+        else:
+            return str(f"{result}")
+    if type1 == "in" and type2 == "m":
         result = num / 39.37
-        return str(f"{result}m")
-    if type1 == "9" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "in" and type2 == "cm":
         result = num * 2.54
-        return str(f"{result}cm")
-    if type1 == "9" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}cm")
+        else:
+            return str(f"{result}")
+    if type1 == "in" and type2 == "mm":
         result = num * 25.4
-        return str(f"{result}mm")
-    if type1 == "9" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}mm")
+        else:
+            return str(f"{result}")
+    if type1 == "in" and type2 == "nm":
         result = num * 25400000
-        return str(f"{result}nm")
-    if type1 == "9" and type2 == "6":
+        if symbol == True:
+            return str(f"{result}nm")
+        else:
+            return str(f"{result}")
+    if type1 == "in" and type2 == "mi":
         result = num / 63360
-        return str(f"{result}mi")
-    if type1 == "9" and type2 == "7":
+        if symbol == True:
+            return str(f"{result}mi")
+        else:
+            return str(f"{result}")
+    if type1 == "in" and type2 == "yd":
         result = num / 36
-        return str(f"{result}yd")
-    if type1 == "9" and type2 == "8":
+        if symbol == True:
+            return str(f"{result}yd")
+        else:
+            return str(f"{result}")
+    if type1 == "in" and type2 == "ft":
         result = num / 12
-        return str(f"{result}ft")
-    if type1 == "9" and type2 == "9":
+        if symbol == True:
+            return str(f"{result}ft")
+        else:
+            return str(f"{result}")
+    if type1 == "in" and type2 == "in":
         result = num
-        return str(f"{result}in")
+        if symbol == True:
+            return str(f"{result}in")
+        else:
+            return str(f"{result}")
 
-def temp(type1, type2, num):
-    if type1 == "1" and type2 == "1":
-        return str(f"{num}°C")
-    if type1 == "1" and type2 == "2":
+
+def temp(type1, type2, num, symbol):
+    if type1 == "c" and type2 == "c":
+        result = num
+        if symbol == True:
+            return str(f"{result}°C")
+        else:
+            return str(f"{result}")
+    if type1 == "c" and type2 == "f":
         result = (num*9/5) + 32
-        return str(f"{result}°F")
-    if type1 == "1" and type2 == "3":
+        if symbol == True:
+            return str(f"{num}°F")
+        else:
+            return str(f"{num}")
+    if type1 == "c" and type2 == "k":
         result = num + 273.15
-        return str(f"{result}°K")
-    if type1 == "2" and type2 == "2":
-        return str(f"{num}°F")
-    if type1 == "2" and type2 == "1":
+        if symbol == True:
+            return str(f"{num}°K")
+        else:
+            return str(f"{num}")
+    if type1 == "f" and type2 == "f":
+        result = num
+        if symbol == True:
+            return str(f"{num}°F")
+        else:
+            return str(f"{num}")
+    if type1 == "f" and type2 == "c":
         result = (num-32)*5/9
-        return str(f"{result}°C")
-    if type1 == "2" and type2 == "3":
+        if symbol == True:
+            return str(f"{num}°C")
+        else:
+            return str(f"{num}")
+    if type1 == "f" and type2 == "k":
         result = (num - 32)*5 / 9 + 273.15
-        return str(f"{result}°K")
-    if type1 == "3" and type2 == "3":
-        return str(f"{num}°K")
-    if type1 == "3" and type2 == "2":
+        if symbol == True:
+            return str(f"{num}°K")
+        else:
+            return str(f"{num}")
+    if type1 == "k" and type2 == "k":
+        result = num
+        if symbol == True:
+            return str(f"{num}°K")
+        else:
+            return str(f"{num}")
+    if type1 == "k" and type2 == "f":
         result = (num + 32) / 5 * 9 - 273.15
-        return str(f"{result}°F")
-    if type1 == "3" and type2 == "1":
+        if symbol == True:
+            return str(f"{num}°F")
+        else:
+            return str(f"{num}")
+    if type1 == "k" and type2 == "c":
         result = num - 273.15
-        return str(f"{result}°C")
+        if symbol == True:
+            return str(f"{num}°C")
+        else:
+            return str(f"{num}")
 
-def speed(type1,type2,num):
-    if type1 == "1" and type2 == "1":
+def speed(type1,type2,num, symbol):
+    if type1 == "mph" and type2 == "mph":
         result = num
-        return str(f"{result}mph")
-    if type1 == "1" and type2 == "2":
+        if symbol == True:
+            return str(f"{result}mph")
+        else:
+            return str(f"{result}")
+    if type1 == "mph" and type2 == "fts":
         result = num * 1.467
-        return str(f"{result}ft/s")
-    if type1 == "1" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}ft/s")
+        else:
+            return str(f"{result}")
+    if type1 == "mph" and type2 == "ms":
         result = num / 2.237
-        return str(f"{result}m/s")
-    if type1 == "1" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}m/s")
+        else:
+            return str(f"{result}")
+    if type1 == "mph" and type2 == "kmh":
         result = num * 1.609
-        return str(f"{result}km/h")
-    if type1 == "1" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}km/h")
+        else:
+            return str(f"{result}")
+    if type1 == "mph" and type2 == "kn":
         result = num / 1.151
-        return str(f"{result}kn")
+        if symbol == True:
+            return str(f"{result}kn")
+        else:
+            return str(f"{result}")
     # FPS
-    if type1 == "2" and type2 == "1":
+    if type1 == "fts" and type2 == "mph":
         result = num / 1.467
-        return str(f"{result}mph")
-    if type1 == "2" and type2 == "2":
+        if symbol == True:
+            return str(f"{result}mph")
+        else:
+            return str(f"{result}")
+    if type1 == "fts" and type2 == "fts":
         result = num
-        return str(f"{result}ft/s")
-    if type1 == "2" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}ft/s")
+        else:
+            return str(f"{result}")
+    if type1 == "fts" and type2 == "ms":
         result = num / 3.281
-        return str(f"{result}m/s")
-    if type1 == "2" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}m/s")
+        else:
+            return str(f"{result}")
+    if type1 == "fts" and type2 == "kmh":
         result = num * 1.097
-        return str(f"{result}km/h")
-    if type1 == "2" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}km/h")
+        else:
+            return str(f"{result}")
+    if type1 == "fts" and type2 == "kn":
         result = num / 1.688
-        return str(f"{result}kn")
+        if symbol == True:
+            return str(f"{result}kn")
+        else:
+            return str(f"{result}")
     #M S
-    if type1 == "3" and type2 == "1":
+    if type1 == "ms" and type2 == "mph":
         result = num * 2.237
-        return str(f"{result}mph")
-    if type1 == "3" and type2 == "2":
+        if symbol == True:
+            return str(f"{result}mph")
+        else:
+            return str(f"{result}")
+    if type1 == "ms" and type2 == "fts":
         result = num * 3.281
-        return str(f"{result}ft/s")
-    if type1 == "3" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}ft/s")
+        else:
+            return str(f"{result}")
+    if type1 == "ms" and type2 == "ms":
         result = num
-        return str(f"{result}m/s")
-    if type1 == "3" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}m/s")
+        else:
+            return str(f"{result}")
+    if type1 == "ms" and type2 == "kmh":
         result = num * 3.6
-        return str(f"{result}km/h")
-    if type1 == "3" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}km/h")
+        else:
+            return str(f"{result}")
+    if type1 == "ms" and type2 == "kn":
         result = num / 1.944
-        return str(f"{result}kn")
+        if symbol == True:
+            return str(f"{result}kn")
+        else:
+            return str(f"{result}")
     #KMS
-    if type1 == "4" and type2 == "1":
+    if type1 == "kmh" and type2 == "mph":
         result = num / 1.609
-        return str(f"{result}mph")
-    if type1 == "4" and type2 == "2":
+        if symbol == True:
+            return str(f"{result}mph")
+        else:
+            return str(f"{result}")
+    if type1 == "kmh" and type2 == "fts":
         result = num / 1.097
-        return str(f"{result}ft/s")
-    if type1 == "4" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}ft/s")
+        else:
+            return str(f"{result}")
+    if type1 == "kmh" and type2 == "ms":
         result = num / 3.6
-        return str(f"{result}m/s")
-    if type1 == "4" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}m/s")
+        else:
+            return str(f"{result}")
+    if type1 == "kmh" and type2 == "kmh":
         result = num
-        return str(f"{result}km/h")
-    if type1 == "4" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}km/h")
+        else:
+            return str(f"{result}")
+    if type1 == "kmh" and type2 == "kn":
         result = num / 1.852
-        return str(f"{result}kn")
+        if symbol == True:
+            return str(f"{result}kn")
+        else:
+            return str(f"{result}")
     #Kn
-    if type1 == "5" and type2 == "1":
+    if type1 == "kn" and type2 == "mph":
         result = num * 1.151
-        return str(f"{result}mph")
-    if type1 == "5" and type2 == "2":
+        if symbol == True:
+            return str(f"{result}mph")
+        else:
+            return str(f"{result}")
+    if type1 == "kn" and type2 == "fts":
         result = num * 1.688
-        return str(f"{result}ft/s")
-    if type1 == "5" and type2 == "3":
+        if symbol == True:
+            return str(f"{result}ft/s")
+        else:
+            return str(f"{result}")
+    if type1 == "kn" and type2 == "ms":
         result = num / 1.944
-        return str(f"{result}m/s")
-    if type1 == "5" and type2 == "4":
+        if symbol == True:
+            return str(f"{result}m/s")
+        else:
+            return str(f"{result}")
+    if type1 == "kn" and type2 == "kmh":
         result = num * 1.852
-        return str(f"{result}km/h")
-    if type1 == "5" and type2 == "5":
+        if symbol == True:
+            return str(f"{result}km/h")
+        else:
+            return str(f"{result}")
+    if type1 == "kn" and type2 == "kn":
         result = num
-        return str(f"{result}kn")
+        if symbol == True:
+            return str(f"{result}kn")
+        else:
+            return str(f"{result}")
 
 
 
