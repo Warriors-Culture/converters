@@ -2,31 +2,31 @@ def length(type1, type2, num, symbol):
     if type1 == "km" and type2 == "km":
         return str(f"{num}km")
     if type1 == "km" and type2 == "m":
-        result = num / 1000
+        result = num * 1000
         if symbol == True:
             return str(f"{result}m")
         else:
             return str(f"{result}")
     if type1 == "km" and type2 == "cm":
-        result = num/100000
+        result = num * 100000
         if symbol == True:
             return str(f"{result}cm")
         else:
             return str(f"{result}")
     if type1 == "km" and type2 == "mm":
-        result = num/1000000
+        result = num * 1000000
         if symbol == True:
             return str(f"{result}mm")
         else:
             return str(f"{result}")
     if type1 == "km" and type2 == "nm":
-        result = num/1000000000000
+        result = num * 1000000000000
         if symbol == True:
             return str(f"{result}nm")
         else:
             return str(f"{result}")
     if type1 == "km" and type2 == "mi":
-        result = num * 0.6214
+        result = num / 1.609
         if symbol == True:
             return str(f"{result}mi")
         else:
@@ -52,7 +52,7 @@ def length(type1, type2, num, symbol):
 
     # Meter
     if type1 == "m" and type2 == "km":
-        result = num * 1000
+        result = num / 1000
         if symbol == True:
             return str(f"{result}km")
         else:
@@ -490,7 +490,8 @@ def length(type1, type2, num, symbol):
             return str(f"{result}in")
         else:
             return str(f"{result}")
-
+    else:
+        return("Invalid")
 
 def temp(type1, type2, num, symbol):
     if type1 == "c" and type2 == "c":
@@ -547,8 +548,10 @@ def temp(type1, type2, num, symbol):
             return str(f"{num}°C")
         else:
             return str(f"{num}")
+    else:
+        return("Invalid")
 
-def speed(type1,type2,num, symbol):
+def speed(type1, type2, num, symbol):
     if type1 == "mph" and type2 == "mph":
         result = num
         if symbol == True:
@@ -703,8 +706,629 @@ def speed(type1,type2,num, symbol):
             return str(f"{result}kn")
         else:
             return str(f"{result}")
+    else:
+        return("Invalid")
+
+def time(type1, type2, num, symbol):
+    #MS
+    if type1 == "ms" and type2 == "ms":
+        result = num
+        if symbol == True:
+            return str(f"{result}ms")
+        else:
+            return str(f"{result}")
+    if type1 == "ms" and type2 == "s":
+        result = num / 1000
+        if symbol == True:
+            return str(f"{result}s")
+        else:
+            return str(f"{result}")
+    if type1 == "ms" and type2 == "min":
+        result = num / 60000
+        if symbol == True:
+            return str(f"{result}min")
+        else:
+            return str(f"{result}")
+    if type1 == "ms" and type2 == "h":
+        result = num / 3600000
+        if symbol == True:
+            return str(f"{result}h")
+        else:
+            return str(f"{result}")
+    if type1 == "ms" and type2 == "d":
+        result = num / 86400000
+        if symbol == True:
+            return str(f"{result}d")
+        else:
+            return str(f"{result}")
+    if type1 == "ms" and type2 == "w":
+        result = num / 604800000
+        if symbol == True:
+            return str(f"{result}w")
+        else:
+            return str(f"{result}")
+    if type1 == "ms" and type2 == "m":
+        result = num / 2628000000
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "ms" and type2 == "y":
+        result = num / 31540000000
+        if symbol == True:
+            return str(f"{result}y")
+        else:
+            return str(f"{result}")
+    if type1 == "ms" and type2 == "dec":
+        result = num / 315400000000
+        if symbol == True:
+            return str(f"{result}dec")
+        else:
+            return str(f"{result}")
+    if type1 == "ms" and type2 == "dec":
+        result = num / 3154000000000
+        if symbol == True:
+            return str(f"{result}dec")
+        else:
+            return str(f"{result}")
+
+    #S
+    if type1 == "s" and type2 == "ms":
+        result = num * 1000
+        if symbol == True:
+            return str(f"{result}ms")
+        else:
+            return str(f"{result}")
+    if type1 == "s" and type2 == "s":
+        result = num
+        if symbol == True:
+            return str(f"{result}s")
+        else:
+            return str(f"{result}")
+    if type1 == "s" and type2 == "min":
+        result = num / 60
+        if symbol == True:
+            return str(f"{result}min")
+        else:
+            return str(f"{result}")
+    if type1 == "s" and type2 == "h":
+        result = num / 3600
+        if symbol == True:
+            return str(f"{result}h")
+        else:
+            return str(f"{result}")
+    if type1 == "s" and type2 == "d":
+        result = num / 86400
+        if symbol == True:
+            return str(f"{result}d")
+        else:
+            return str(f"{result}")
+    if type1 == "s" and type2 == "w":
+        result = num / 604800
+        if symbol == True:
+            return str(f"{result}w")
+        else:
+            return str(f"{result}")
+    if type1 == "s" and type2 == "m":
+        result = num / 2628000
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "s" and type2 == "y":
+        result = num / 31540000
+        if symbol == True:
+            return str(f"{result}y")
+        else:
+            return str(f"{result}")
+    if type1 == "s" and type2 == "dec":
+        result = num / 315400000
+        if symbol == True:
+            return str(f"{result}dec")
+        else:
+            return str(f"{result}")
+    if type1 == "s" and type2 == "dec":
+        result = num / 3154000000
+        if symbol == True:
+            return str(f"{result}dec")
+        else:
+            return str(f"{result}")
+    # M
+    if type1 == "min" and type2 == "ms":
+        result = num * 60000
+        if symbol == True:
+            return str(f"{result}ms")
+        else:
+            return str(f"{result}")
+    if type1 == "min" and type2 == "s":
+        result = num * 60
+        if symbol == True:
+            return str(f"{result}s")
+        else:
+            return str(f"{result}")
+    if type1 == "min" and type2 == "min":
+        result = num
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "min" and type2 == "h":
+        result = num / 60
+        if symbol == True:
+            return str(f"{result}h")
+        else:
+            return str(f"{result}")
+    if type1 == "min" and type2 == "d":
+        result = num / 1440
+        if symbol == True:
+            return str(f"{result}d")
+        else:
+            return str(f"{result}")
+    if type1 == "min" and type2 == "w":
+        result = num / 10080
+        if symbol == True:
+            return str(f"{result}w")
+        else:
+            return str(f"{result}")
+    if type1 == "min" and type2 == "m":
+        result = num / 43800
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "min" and type2 == "y":
+        result = num / 525600
+        if symbol == True:
+            return str(f"{result}y")
+        else:
+            return str(f"{result}")
+    if type1 == "min" and type2 == "dec":
+        result = num / 5256000
+        if symbol == True:
+            return str(f"{result}dec")
+        else:
+            return str(f"{result}")
+    if type1 == "min" and type2 == "c":
+        result = num / 52560000
+        if symbol == True:
+            return str(f"{result}c")
+        else:
+            return str(f"{result}")
+
+    # H
+    if type1 == "h" and type2 == "ms":
+        result = num * 3600000
+        if symbol == True:
+            return str(f"{result}ms")
+        else:
+            return str(f"{result}")
+    if type1 == "h" and type2 == "s":
+        result = num * 3600
+        if symbol == True:
+            return str(f"{result}s")
+        else:
+            return str(f"{result}")
+    if type1 == "h" and type2 == "min":
+        result = num * 60
+        if symbol == True:
+            return str(f"{result}min")
+        else:
+            return str(f"{result}")
+    if type1 == "h" and type2 == "h":
+        result = num
+        if symbol == True:
+            return str(f"{result}h")
+        else:
+            return str(f"{result}")
+    if type1 == "h" and type2 == "d":
+        result = num / 24
+        if symbol == True:
+            return str(f"{result}d")
+        else:
+            return str(f"{result}")
+    if type1 == "h" and type2 == "w":
+        result = num / 168
+        if symbol == True:
+            return str(f"{result}w")
+        else:
+            return str(f"{result}")
+    if type1 == "h" and type2 == "m":
+        result = num / 730
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "h" and type2 == "y":
+        result = num / 8760
+        if symbol == True:
+            return str(f"{result}y")
+        else:
+            return str(f"{result}")
+    if type1 == "h" and type2 == "dec":
+        result = num / 87600
+        if symbol == True:
+            return str(f"{result}dec")
+        else:
+            return str(f"{result}")
+    if type1 == "h" and type2 == "c":
+        result = num / 876000
+        if symbol == True:
+            return str(f"{result}c")
+        else:
+            return str(f"{result}")
 
 
+    # D
+    if type1 == "d" and type2 == "ms":
+        result = num * 86400000
+        if symbol == True:
+            return str(f"{result}ms")
+        else:
+            return str(f"{result}")
+    if type1 == "d" and type2 == "s":
+        result = num * 86400
+        if symbol == True:
+            return str(f"{result}s")
+        else:
+            return str(f"{result}")
+    if type1 == "d" and type2 == "min":
+        result = num * 1440
+        if symbol == True:
+            return str(f"{result}min")
+        else:
+            return str(f"{result}")
+    if type1 == "d" and type2 == "h":
+        result = num * 24
+        if symbol == True:
+            return str(f"{result}h")
+        else:
+            return str(f"{result}")
+    if type1 == "d" and type2 == "d":
+        result = num
+        if symbol == True:
+            return str(f"{result}d")
+        else:
+            return str(f"{result}")
+    if type1 == "d" and type2 == "w":
+        result = num / 7
+        if symbol == True:
+            return str(f"{result}w")
+        else:
+            return str(f"{result}")
+    if type1 == "d" and type2 == "m":
+        result = num / 30.417
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "d" and type2 == "y":
+        result = num / 365
+        if symbol == True:
+            return str(f"{result}y")
+        else:
+            return str(f"{result}")
+    if type1 == "d" and type2 == "dec":
+        result = num / 3650
+        if symbol == True:
+            return str(f"{result}dec")
+        else:
+            return str(f"{result}")
+    if type1 == "d" and type2 == "c":
+        result = num / 36500
+        if symbol == True:
+            return str(f"{result}c")
+        else:
+            return str(f"{result}")
+
+     # W
+    if type1 == "w" and type2 == "ms":
+        result = num * 604800000
+        if symbol == True:
+            return str(f"{result}ms")
+        else:
+            return str(f"{result}")
+    if type1 == "w" and type2 == "s":
+        result = num * 604800
+        if symbol == True:
+            return str(f"{result}s")
+        else:
+            return str(f"{result}")
+    if type1 == "w" and type2 == "min":
+        result = num * 10080
+        if symbol == True:
+            return str(f"{result}min")
+        else:
+            return str(f"{result}")
+    if type1 == "w" and type2 == "h":
+        result = num * 168
+        if symbol == True:
+            return str(f"{result}h")
+        else:
+            return str(f"{result}")
+    if type1 == "w" and type2 == "d":
+        result = num / 7
+        if symbol == True:
+            return str(f"{result}d")
+        else:
+            return str(f"{result}")
+    if type1 == "w" and type2 == "w":
+        result = num
+        if symbol == True:
+            return str(f"{result}w")
+        else:
+            return str(f"{result}")
+    if type1 == "w" and type2 == "m":
+        result = num / 4.345
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "w" and type2 == "y":
+        result = num / 52.143
+        if symbol == True:
+            return str(f"{result}y")
+        else:
+            return str(f"{result}")
+    if type1 == "w" and type2 == "dec":
+        result = num / 521
+        if symbol == True:
+            return str(f"{result}dec")
+        else:
+            return str(f"{result}")
+    if type1 == "w" and type2 == "c":
+        result = num / 5214
+        if symbol == True:
+            return str(f"{result}c")
+        else:
+            return str(f"{result}")
+
+        # M
+    if type1 == "m" and type2 == "ms":
+        result = num * 2628000000
+        if symbol == True:
+            return str(f"{result}ms")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "s":
+        result = num * 2628000
+        if symbol == True:
+            return str(f"{result}s")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "min":
+        result = num * 43800
+        if symbol == True:
+            return str(f"{result}min")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "h":
+        result = num * 730
+        if symbol == True:
+            return str(f"{result}h")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "d":
+        result = num * 30.417
+        if symbol == True:
+            return str(f"{result}d")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "w":
+        result = num * 4.345
+        if symbol == True:
+            return str(f"{result}w")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "m":
+        result = num
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "y":
+        result = num / 12
+        if symbol == True:
+            return str(f"{result}y")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "dec":
+        result = num / 120
+        if symbol == True:
+            return str(f"{result}dec")
+        else:
+            return str(f"{result}")
+    if type1 == "m" and type2 == "c":
+        result = num / 1200
+        if symbol == True:
+            return str(f"{result}c")
+        else:
+            return str(f"{result}")
+
+     # Y
+    if type1 == "y" and type2 == "ms":
+        result = num * 31540000000
+        if symbol == True:
+            return str(f"{result}ms")
+        else:
+            return str(f"{result}")
+    if type1 == "y" and type2 == "s":
+        result = num * 31540000
+        if symbol == True:
+            return str(f"{result}s")
+        else:
+            return str(f"{result}")
+    if type1 == "y" and type2 == "min":
+        result = num * 525600
+        if symbol == True:
+            return str(f"{result}min")
+        else:
+            return str(f"{result}")
+    if type1 == "y" and type2 == "h":
+        result = num * 8760
+        if symbol == True:
+            return str(f"{result}h")
+        else:
+            return str(f"{result}")
+    if type1 == "y" and type2 == "d":
+        result = num * 365
+        if symbol == True:
+            return str(f"{result}d")
+        else:
+            return str(f"{result}")
+    if type1 == "y" and type2 == "w":
+        result = num * 52.143
+        if symbol == True:
+            return str(f"{result}w")
+        else:
+            return str(f"{result}")
+    if type1 == "y" and type2 == "m":
+        result = num * 12
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "y" and type2 == "y":
+        result = num
+        if symbol == True:
+            return str(f"{result}y")
+        else:
+            return str(f"{result}")
+    if type1 == "y" and type2 == "dec":
+        result = num / 10
+        if symbol == True:
+            return str(f"{result}dec")
+        else:
+            return str(f"{result}")
+    if type1 == "y" and type2 == "c":
+        result = num / 100
+        if symbol == True:
+            return str(f"{result}c")
+        else:
+            return str(f"{result}")
+
+    # Dec
+    if type1 == "dec" and type2 == "ms":
+        result = num * 315400000000
+        if symbol == True:
+            return str(f"{result}ms")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "s":
+        result = num * 315400000
+        if symbol == True:
+            return str(f"{result}s")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "min":
+        result = num * 5256000
+        if symbol == True:
+            return str(f"{result}min")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "h":
+        result = num * 87600
+        if symbol == True:
+            return str(f"{result}h")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "d":
+        result = num * 3650
+        if symbol == True:
+            return str(f"{result}d")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "w":
+        result = num * 521
+        if symbol == True:
+            return str(f"{result}w")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "m":
+        result = num * 120
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "y":
+        result = num * 10
+        if symbol == True:
+            return str(f"{result}y")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "dec":
+        result = num
+        if symbol == True:
+            return str(f"{result}dec")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "c":
+        result = num / 10
+        if symbol == True:
+            return str(f"{result}c")
+        else:
+            return str(f"{result}")
+
+# C
+    if type1 == "c" and type2 == "ms":
+        result = num * 3154000000000
+        if symbol == True:
+            return str(f"{result}ms")
+        else:
+            return str(f"{result}")
+    if type1 == "c" and type2 == "s":
+        result = num * 3154000000
+        if symbol == True:
+            return str(f"{result}s")
+        else:
+            return str(f"{result}")
+    if type1 == "c" and type2 == "min":
+        result = num * 52560000
+        if symbol == True:
+            return str(f"{result}min")
+        else:
+            return str(f"{result}")
+    if type1 == "c" and type2 == "h":
+        result = num * 876000
+        if symbol == True:
+            return str(f"{result}h")
+        else:
+            return str(f"{result}")
+    if type1 == "c" and type2 == "d":
+        result = num * 36500
+        if symbol == True:
+            return str(f"{result}d")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "w":
+        result = num * 5214
+        if symbol == True:
+            return str(f"{result}w")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "m":
+        result = num * 1200
+        if symbol == True:
+            return str(f"{result}m")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "y":
+        result = num * 100
+        if symbol == True:
+            return str(f"{result}y")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "dec":
+        result = num * 10
+        if symbol == True:
+            return str(f"{result}dec")
+        else:
+            return str(f"{result}")
+    if type1 == "dec" and type2 == "c":
+        result = num
+        if symbol == True:
+            return str(f"{result}c")
+        else:
+            return str(f"{result}")
 
 
 
